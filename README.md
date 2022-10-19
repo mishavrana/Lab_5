@@ -30,10 +30,10 @@
 - override the content of the file
 
 ### Basic
-<img src="https://github.com/mishavrana/Lab_5/blob/master/Assets/Base.gif" width="150" height="150" />
+<img src="https://github.com/mishavrana/Lab_5/blob/master/Assets/Base.gif" width="600" height="500" />
 
 ### Pro
-<img src="https://github.com/mishavrana/Lab_5/blob/master/Assets/Pro.gif" width="150" height="150" />
+<img src="https://github.com/mishavrana/Lab_5/blob/master/Assets/Pro.gif" width="600" height="500" />
 
 ### Expert
-<img src="https://github.com/mishavrana/Lab_5/blob/master/Assets/Expert.gif" width="150" height="150" />
+<img src="https://github.com/mishavrana/Lab_5/blob/master/Assets/Expert.gif" width="600" height="500" />
