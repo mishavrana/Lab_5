@@ -1,5 +1,3 @@
-# Untitled
-
 # This project allows to open text files, edit them and change formats
 
 ## The functionality depends on the version:
@@ -31,4 +29,11 @@
 - add lines to the file
 - override the content of the file
 
-  
+### Basic
+<img src="https://github.com/mishavrana/Lab_5/blob/master/Assets/Base.gif" width="600" height="500" />
+
+### Pro
+<img src="https://github.com/mishavrana/Lab_5/blob/master/Assets/Pro.gif" width="600" height="500" />
+
+### Expert
+<img src="https://github.com/mishavrana/Lab_5/blob/master/Assets/Expert.gif" width="600" height="500" />
