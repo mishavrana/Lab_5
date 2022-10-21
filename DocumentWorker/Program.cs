@@ -34,6 +34,63 @@ class Program
         }
     }
 
+    private static void texterOnBaseAccess(DocumentWorker texter)
+    {
+        string? task = null;
+
+        Console.WriteLine();
+        Console.WriteLine("You can open files");
+        Console.WriteLine("Choose operation: o - open file/e - edit files/s - change format");
+        while (true)
+        {
+            task = Console.ReadLine()!;
+            if (task == "o" || task == "e" || task == "s")
+            {
+                break;
+            }
+        }
+        checkTask(task, texter);
+    }
+
+    private static void texterOnProAccess(ProDocumentWorker texter)
+    {
+        string? task = null;
+
+        Console.WriteLine();
+        Console.WriteLine("You can open and edit files");
+        Console.WriteLine("Choose operation: o - open file/e - edit files/s - change format");
+        while (true)
+        {
+            task = Console.ReadLine()!;
+            if (task == "o" || task == "e" || task == "s")
+            {
+                break;
+            }
+        }
+        checkTask(task, texter);
+    }
+
+    private static void texterOnExpertAccess(ExpertDocumentWorker texter)
+    {
+        string? task = null;
+
+        Console.WriteLine();
+        Console.WriteLine("You can open and edit and change files' format ");
+        Console.WriteLine("Choose operation: o - open file/e - edit files/s - change format");
+        while (true)
+        {
+            task = Console.ReadLine()!;
+            if (task == "o" || task == "e" || task == "s")
+            {
+                break;
+            }
+        }
+        checkTask(task, texter);
+    }
+
+    // Helping functions
+
+    // Checks access level of the user of the program
     private static AccessLevel getAccessLevel()
     {
         string? key = null;
@@ -56,77 +113,20 @@ class Program
         return AccessLevel.Base;
     }
 
-    private static void texterOnBaseAccess(DocumentWorker texter)
+    // Checks the operation of the 'DocumentWorker and it's subclasses
+    private static void checkTask(string key, DocumentWorker texter)
     {
-        string? task = null;
-
-        Console.WriteLine();
-        Console.WriteLine("You can open files");
-        Console.WriteLine("Choose operation: o - open file/e - edit files/s - change format");
-        while (true)
+        switch (key)
         {
-            task = Console.ReadLine()!;
-            if (task == "o")
-            {
+            case "o":
+                texter.OpenDocument();
                 break;
-            }
-        }
-        texter.OpenDocument();
-    }
-
-    private static void texterOnProAccess(ProDocumentWorker texter)
-    {
-        string? task = null;
-
-        Console.WriteLine();
-        Console.WriteLine("You can open and edit files");
-        Console.WriteLine("Choose operation: o - open file/e - edit files/s - change format");
-        while (true)
-        {
-            task = Console.ReadLine()!;
-            if (task == "o" || task == "e")
-            {
+            case "e":
+                texter.EditDocument();
                 break;
-            }
-        }
-        switch (task)
-            {
-                case "o":
-                    texter.OpenDocument();
-                    break;
-                case "e":
-                    texter.EditDocument();
-                    break;
-            }
-    }
-
-    private static void texterOnExpertAccess(ExpertDocumentWorker texter)
-    {
-        string? task = null;
-
-        Console.WriteLine();
-        Console.WriteLine("You can open and edit and change files' format ");
-        Console.WriteLine("Choose operation: o - open file/e - edit files/s - change format");
-        while (true)
-        {
-            task = Console.ReadLine()!;
-            if (task == "o" || task == "e" || task == "s")
-            {
+            case "s":
+                texter.SaveDocument();
                 break;
-            }
         }
-        switch (task)
-            {
-                case "o":
-                    texter.OpenDocument();
-                    break;
-                case "e":
-                    texter.EditDocument();
-                    break;
-                case "s":
-                    texter.SaveDocument();
-                    break;
-            }
     }
-
 }

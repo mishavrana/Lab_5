@@ -1,3 +1,4 @@
 Lines were overriden!
 This is the test file!
 You can edit it!
+It works!
